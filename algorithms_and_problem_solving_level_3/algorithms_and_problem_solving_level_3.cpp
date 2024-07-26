@@ -10,6 +10,7 @@
 #include "9.h"
 #include "10.h"
 #include "11.h"
+#include "12.h"
 
 int main()
 {
@@ -25,7 +26,8 @@ int main()
 	//MultiplyMatrixEx();
 	//MiddleRowAndMiddleColInMatrix();
 	 //SumOfMatrixEx();
-	EqualMatricesEx();
+	//EqualMatricesEx();
+	AreTypicalMatricesEx();
 	//system("pause>0");
 	return 0;
 }
