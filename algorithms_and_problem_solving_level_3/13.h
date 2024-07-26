@@ -55,11 +55,20 @@ namespace soln13
 void IsIdentityMarixEx() {
 
 
-	int Matrix[3][3], Matrix2[3][3];
+	int Matrix[3][3];
+	int Matrix2[3][3] = { {1,0,0},{0,1,0},{0,0,1} };
 	cout << "\nThe following is a 3x3 frist matrix m1:\n";
 	soln13::FillMatrixByRandomNum2(Matrix);
 	soln13::PrintMatrix(Matrix);
 	if (soln13::IsIdentityMarix(Matrix, 3, 3))
+		cout << "\nYES: Matrix is identity.";
+	else
+		cout << "\nNo: Matrix is NOT identity.";
+
+	cout << "\nThe following is a 3x3 frist matrix m1:\n";
+	soln13::PrintMatrix(Matrix2);
+
+	if (soln13::IsIdentityMarix(Matrix2, 3, 3))
 		cout << "\nYES: Matrix is identity.";
 	else
 		cout << "\nNo: Matrix is NOT identity.";
