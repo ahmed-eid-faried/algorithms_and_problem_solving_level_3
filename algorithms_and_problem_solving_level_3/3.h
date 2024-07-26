@@ -28,7 +28,7 @@ namespace soln3
 			}
 		}
 	}
- 
+
 	int RowSum(int arr[3][3], short RowNumber, short Cols) {
 		int Sum = 0;
 		for (short j = 0; j <= Cols - 1; j++)
@@ -37,11 +37,18 @@ namespace soln3
 		}
 		return Sum;
 	}
-	void PrintEachRowSum(int arr[3][3], short Rows, short Cols)
+	void SumMatixRowsInArry(int arr[3][3], int  arr2[3], short Rows, short Cols)
 	{
 		cout << "\nThe the following are the sum of each row in the matrix:\n";
 		for (short i = 0; i < Rows; i++) {
-			cout << " Row " << i + 1 << " Sum = " << RowSum(arr, i, Cols) << endl;
+			arr2[i] = RowSum(arr, i, Cols);
+		}
+	}
+	void PrintEachRowSum(int  arr2[3], short Rows)
+	{
+		cout << "\nThe the following are the sum of each row in the matrix:\n";
+		for (short i = 0; i < Rows; i++) {
+			cout << arr2[i] << endl;
 		}
 	}
 }
@@ -49,10 +56,10 @@ namespace soln3
 
 void RandomMatrixWithRowSumInOneDArray() {
 	int arr[3][3];
-
+	int arr2[3];
 	soln3::FillMatrixByRandomNum2(arr);
 	soln3::PrintMatrix(arr);
-
- 	soln3::PrintEachRowSum(arr, 3, 3);
+	soln3::SumMatixRowsInArry(arr, arr2, 3, 3);
+	soln3::PrintEachRowSum(arr2, 3);
 	system("pause>0");
 }
