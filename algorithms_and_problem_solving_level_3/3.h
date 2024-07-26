@@ -54,7 +54,7 @@ namespace soln3
 }
 
 
-void RandomMatrixWithRowSumInOneDArray() {
+void SumMatixRowsInArryEx() {
 	int arr[3][3];
 	int arr2[3];
 	soln3::FillMatrixByRandomNum2(arr);
