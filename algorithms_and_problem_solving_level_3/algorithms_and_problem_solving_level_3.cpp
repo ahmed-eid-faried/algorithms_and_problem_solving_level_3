@@ -11,6 +11,7 @@
 #include "10.h"
 #include "11.h"
 #include "12.h"
+#include "13.h"
 
 int main()
 {
@@ -27,7 +28,8 @@ int main()
 	//MiddleRowAndMiddleColInMatrix();
 	 //SumOfMatrixEx();
 	//EqualMatricesEx();
-	AreTypicalMatricesEx();
+	//AreTypicalMatricesEx();
+	 IsIdentityMarixEx();
 	//system("pause>0");
 	return 0;
 }
