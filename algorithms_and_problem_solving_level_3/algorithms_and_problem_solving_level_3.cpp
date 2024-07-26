@@ -6,6 +6,7 @@
 #include "5.h"
 #include "6.h"
 #include "7.h"
+#include "8.h"
 
 int main()
 {
@@ -17,9 +18,9 @@ int main()
 	//RandomMatrixWithColSum();
 	//ColsSumInArrayEx();
 	//FillMatrixWithOrderedNumbersEx();
-	 TransposeMatrixEx();
-	//std::cout << "Hello World!\n";
-	 //system("pause>0");
-	 return 0;
+	 //TransposeMatrixEx();
+	MultiplyMatrixEx();
+	//system("pause>0");
+	return 0;
 }
 
