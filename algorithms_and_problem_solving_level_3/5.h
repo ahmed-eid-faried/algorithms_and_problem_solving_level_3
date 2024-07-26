@@ -66,5 +66,4 @@ void ColsSumInArrayEx() {
 
 	soln5::ColsSumInArray(arr, arr2, 3, 3);
 	soln5::PrintEachColsSum(arr2, 3);
-	system("pause>0");
 }

@@ -32,7 +32,7 @@ namespace soln6
 }
 
 
-void OrderedMatrix3x3() {
+void FillMatrixWithOrderedNumbersEx() {
 	int arr[3][3];
 
 	soln6::FillMatrixByRandomNum2(arr);
