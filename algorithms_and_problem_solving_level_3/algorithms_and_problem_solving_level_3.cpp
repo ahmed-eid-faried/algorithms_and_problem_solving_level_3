@@ -4,6 +4,7 @@
 #include "3.h"
 #include "4.h"
 #include "5.h"
+#include "6.h"
 
 int main()
 {
@@ -13,7 +14,8 @@ int main()
 	//RandomMatrixWithRowSum();
 	//SumMatixRowsInArryEx();
 	//RandomMatrixWithColSum();
-	ColsSumInArrayEx();
+	//ColsSumInArrayEx();
+	OrderedMatrix3x3();
 	//std::cout << "Hello World!\n";
 }
 
