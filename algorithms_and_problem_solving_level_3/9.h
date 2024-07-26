@@ -2,14 +2,29 @@
 #include <iomanip>
 #include <iostream>
 using namespace std;
-namespace soln8
+namespace soln9
 {
 	int RandomNumber(int From, int To) {
 		int randNum = rand() % (To - From + 1) + From;
 		return randNum;
 	}
 
-	void PrintMatrix(int  Matrix[3][3]) {
+	void PrintMiddleColInMatrix(int  Matrix[3][3]) {
+		for (int i = 0; i < 3; i++)
+		{
+			printf("%0*d   ", 2, Matrix[i][1]);
+		}		
+		cout << endl;
+
+	}
+	void PrintMiddleRowInMatrix(int  Matrix[3][3]) {
+		for (int i = 0; i < 3; i++)
+		{
+			printf("%0*d   ", 2, Matrix[1][i]);
+		}		
+		cout << endl;
+
+	}	void PrintMatrix(int  Matrix[3][3]) {
 		for (int i = 0; i < 3; i++)
 		{
 			for (int j = 0; j < 3; j++)
@@ -43,17 +58,17 @@ namespace soln8
 }
 
 
-void MultiplyMatrixEx() {
+void MiddleRowAndMiddleColInMatrix() {
 
 
-	int Matrix[3][3], Matrix2[3][3], reslutMatrix[3][3];
-	cout << "\nThe following is a 3x3 frist matrix m1:\n";
-	soln8::FillMatrixByRandomNum2(Matrix);
-	soln8::PrintMatrix(Matrix);
-	cout << "\nThe following is a 3x3 second matrix m2:\n";
-	soln8::FillMatrixByRandomNum2(Matrix2);
-	soln8::PrintMatrix(Matrix2);
-	soln8::MultiplyMatrix(Matrix, Matrix2, reslutMatrix, 3, 3);
-	cout << "\nResults m1*m2:\n";
-	soln8::PrintMatrix(reslutMatrix);
+	int Matrix[3][3];
+	cout << "\nThe following is a 3x3 matrix:\n";
+	soln9::FillMatrixByRandomNum2(Matrix);
+	PrintMatrix(Matrix);
+	cout << "\nMiddle Row: ";
+	soln9::PrintMiddleRowInMatrix(Matrix);
+	cout << "\nMiddle Col: ";
+	soln9::PrintMiddleColInMatrix(Matrix);
+
+
 }

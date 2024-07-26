@@ -7,6 +7,8 @@
 #include "6.h"
 #include "7.h"
 #include "8.h"
+#include "9.h"
+#include "10.h"
 
 int main()
 {
@@ -19,7 +21,9 @@ int main()
 	//ColsSumInArrayEx();
 	//FillMatrixWithOrderedNumbersEx();
 	 //TransposeMatrixEx();
-	MultiplyMatrixEx();
+	//MultiplyMatrixEx();
+	//MiddleRowAndMiddleColInMatrix();
+	 SumMatrixEx();
 	//system("pause>0");
 	return 0;
 }
