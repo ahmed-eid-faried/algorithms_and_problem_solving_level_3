@@ -29,7 +29,7 @@ namespace soln10
 			}
 		}
 	}
-	int SumMatrix(int  Matrix[3][3], int cols, int rows) {
+	int SumOfMatrix(int  Matrix[3][3], int cols, int rows) {
 		int	sum = 0;
 		for (int i = 0; i < rows; i++)
 		{
@@ -45,13 +45,13 @@ namespace soln10
 }
 
 
-void MiddleRowAndMiddleColInMatrix() {
+void SumOfMatrixEx() {
 
 
 	int Matrix[3][3];
 	cout << "\nThe following is a 3x3 matrix:\n";
 	soln10::FillMatrixByRandomNum2(Matrix);
 	soln10::PrintMatrix(Matrix);
-	cout << "\nSum of Matrix: " << soln10::SumMatrix(Matrix, 3, 3);
+	cout << "\nSum of Matrix: " << soln10::SumOfMatrix(Matrix, 3, 3);
 
 }

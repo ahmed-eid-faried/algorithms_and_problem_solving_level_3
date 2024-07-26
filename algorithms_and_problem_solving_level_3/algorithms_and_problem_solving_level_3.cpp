@@ -23,7 +23,7 @@ int main()
 	 //TransposeMatrixEx();
 	//MultiplyMatrixEx();
 	//MiddleRowAndMiddleColInMatrix();
-	 SumMatrixEx();
+	 SumOfMatrixEx();
 	//system("pause>0");
 	return 0;
 }
