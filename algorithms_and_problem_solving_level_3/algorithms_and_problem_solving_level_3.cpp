@@ -14,6 +14,7 @@
 #include "13.h"
 #include "14.h"
 #include "15.h"
+#include "16.h"
 
 int main()
 {
@@ -33,7 +34,8 @@ int main()
 	//AreTypicalMatricesEx();
 	 //IsIdentityMarixEx();
 	  //IsScalarMarixEx();
-	  CountNumberInMatrixEx();
+	  //CountNumberInMatrixEx();
+	  CheckIsSparceMatrixEx();
 	//system("pause>0");
 	return 0;
 }
