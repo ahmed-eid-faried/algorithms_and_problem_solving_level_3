@@ -13,6 +13,7 @@
 #include "12.h"
 #include "13.h"
 #include "14.h"
+#include "15.h"
 
 int main()
 {
@@ -31,7 +32,8 @@ int main()
 	//EqualMatricesEx();
 	//AreTypicalMatricesEx();
 	 //IsIdentityMarixEx();
-	  IsScalarMarixEx();
+	  //IsScalarMarixEx();
+	  CountNumberInMatrixEx();
 	//system("pause>0");
 	return 0;
 }
