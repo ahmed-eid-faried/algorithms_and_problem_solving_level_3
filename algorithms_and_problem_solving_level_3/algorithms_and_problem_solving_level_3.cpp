@@ -15,6 +15,8 @@
 #include "14.h"
 #include "15.h"
 #include "16.h"
+#include "17.h"
+#include "18.h"
 
 int main()
 {
@@ -35,7 +37,9 @@ int main()
 	 //IsIdentityMarixEx();
 	  //IsScalarMarixEx();
 	  //CountNumberInMatrixEx();
-	  CheckIsSparceMatrixEx();
+	  //CheckIsSparceMatrixEx();
+	  //IsNumberInMatrixEx();
+	IntersectedNumbersEx();
 	//system("pause>0");
 	return 0;
 }
