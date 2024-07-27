@@ -18,6 +18,9 @@
     <ClCompile Include="algorithms_and_problem_solving_level_3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="1_random_matrix.h">
@@ -78,6 +81,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="20.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="21.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

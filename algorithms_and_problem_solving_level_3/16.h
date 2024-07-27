@@ -54,7 +54,7 @@ namespace soln16
 	bool IsSparseMatrix(int  Matrix[3][3], int cols, int rows) {
 		int counterZero = 0;
 		int counterNotZero = 0;
-		int HafltotalNumOfMatrix = 0.5 * cols * rows;
+		double HafltotalNumOfMatrix = 0.5 * cols * rows;
 		for (int i = 0; i < rows; i++)
 		{
 			for (int j = 0; j < cols; j++)

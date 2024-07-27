@@ -19,6 +19,7 @@
 #include "18.h"
 #include "19.h"
 #include "20.h"
+#include "21.h"
 
 int main()
 {
@@ -43,7 +44,8 @@ int main()
 	  //IsNumberInMatrixEx();
 	//IntersectedNumbersEx();
 	//MinNumAndMaxNumInMatrix();
-	  PalindromeMatrixEx();
+	  //PalindromeMatrixEx();
+	FibonacciUsingLoopEx();
 	//system("pause>0");
 	return 0;
 }
