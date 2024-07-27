@@ -31,15 +31,14 @@ namespace soln14
 		}
 	}
 	bool IsScalarMarix(int  Matrix[3][3], int cols, int rows) {
-		int d = 1;
+		int FristDiagonalElement = Matrix[0][0];
 		for (int i = 0; i < rows; i++)
 		{
 			for (int j = 0; j < cols; j++)
 			{
 				if (i == j)
 				{
-					if (i == 0 && j == 0)d = Matrix[0][0];
-					if (Matrix[i][j] != d)return false;
+					if (Matrix[i][j] != FristDiagonalElement)return false;
 				}
 				else {
 					if (Matrix[i][j] != 0)return false;
@@ -58,7 +57,7 @@ void IsScalarMarixEx() {
 
 
 	int Matrix[3][3];
-	int Matrix2[3][3] = { {1,0,0},{0,1,0},{0,0,1} };
+	int Matrix2[3][3] = { {6,0,0},{0,6,0},{0,0,6} };
 	cout << "\nThe following is a 3x3 frist matrix m1:\n";
 	soln14::FillMatrixByRandomNum2(Matrix);
 	soln14::PrintMatrix(Matrix);
@@ -67,10 +66,9 @@ void IsScalarMarixEx() {
 	else
 		cout << "\nNo: Matrix is NOT scalar.";
 
-	cout << "\nThe following is a 3x3 frist matrix m1:\n";
+	cout << "\n\n\n\nThe following is a 3x3 frist matrix m1:\n";
 	soln14::PrintMatrix(Matrix2);
-
-	if (soln14::IsScalarMarix(Matrix, 3, 3))
+	if (soln14::IsScalarMarix(Matrix2, 3, 3))
 		cout << "\nYES: Matrix is scalar.";
 	else
 		cout << "\nNo: Matrix is NOT scalar.";
