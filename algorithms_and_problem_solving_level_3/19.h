@@ -67,10 +67,11 @@ namespace soln19
 }
 
 
-void IntersectedNumbersEx() {
+void MinNumAndMaxNumInMatrix() {
 
 
-	int Matrix1[3][3] = { {77,5,12},{22,20,6},{14,3,9} };
+	int Matrix1[3][3];
+	soln19::FillMatrixByRandomNum2(Matrix1, 3, 3);
 	cout << "\nMatrix1:\n";
 	soln19::PrintMatrix(Matrix1, 3, 3);
 	cout << "\nMinimum Number is: ";
