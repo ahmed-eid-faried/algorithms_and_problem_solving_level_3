@@ -8,7 +8,8 @@ namespace soln21 {
 		int prev1 = 1;
 		int prev2 = 1;
 		int FebNumber = 1;
-		for (int i = 0; i < num; i++)
+		cout << FebNumber << "   ";
+		for (int i = 0; i < num - 1; i++)
 		{
 			cout << FebNumber << "   ";
 			FebNumber = prev1 + prev2;

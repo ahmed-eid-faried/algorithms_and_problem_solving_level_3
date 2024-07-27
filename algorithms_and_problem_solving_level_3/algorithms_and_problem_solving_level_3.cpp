@@ -20,6 +20,7 @@
 #include "19.h"
 #include "20.h"
 #include "21.h"
+#include "22.h"
 
 int main()
 {
@@ -45,7 +46,8 @@ int main()
 	//IntersectedNumbersEx();
 	//MinNumAndMaxNumInMatrix();
 	  //PalindromeMatrixEx();
-	FibonacciUsingLoopEx();
+	//FibonacciUsingLoopEx();
+	FibonacciUsingRecursionEx();
 	//system("pause>0");
 	return 0;
 }
