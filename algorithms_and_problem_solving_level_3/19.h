@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <iostream>
 using namespace std;
-namespace soln18
+namespace soln19
 {
 	int RandomNumber(int From, int To) {
 		int randNum = rand() % (To - From + 1) + From;
@@ -40,37 +40,41 @@ namespace soln18
 
 		return false;
 	}
-	bool PrintIntersectedNumbers(int  Matrix[3][3], int  Matrix2[3][3], int cols, int rows) {
-
+	int MaxNumInMatrix(int  Matrix[3][3], int cols, int rows) {
+		int max = Matrix[0][0];
 		for (int i = 0; i < rows; i++)
 		{
 			for (int j = 0; j < cols; j++)
 			{
-				int Num = Matrix[i][j];
-
-				if (IsNumberInMatrix(Matrix2, Num, cols, rows)) {
-					cout << setw(3) << Num << "  ";
-				};
-
-				//if (Matrix[i][j] == Matrix2[i][j])	return false;
+				if (Matrix[i][j] > max)  max = Matrix[i][j];
 			}
 		}
 
-		return true;
+		return max;
 	}
+	int MinNumInMatrix(int  Matrix[3][3], int cols, int rows) {
+		int min = Matrix[0][0];
+		for (int i = 0; i < rows; i++)
+		{
+			for (int j = 0; j < cols; j++)
+			{
+				if (Matrix[i][j] < min)  min = Matrix[i][j];
+			}
+		}
 
+		return min;
+	}
 }
 
 
 void IntersectedNumbersEx() {
 
 
-	int Matrix1[3][3] = { {77,5,12},{22,20,1},{1,0,9} };
-	int Matrix2[3][3] = { {5,80,90},{22,77,1},{10,8,33} };
+	int Matrix1[3][3] = { {77,5,12},{22,20,6},{14,3,9} };
 	cout << "\nMatrix1:\n";
-	soln18::PrintMatrix(Matrix1, 3, 3);
-	cout << "\nMatrix2:\n";
-	soln18::PrintMatrix(Matrix2, 3, 3);
-	cout << "\nIntersected Numbers are: \n\n";
-	soln18::PrintIntersectedNumbers(Matrix1, Matrix2, 3, 3);
+	soln19::PrintMatrix(Matrix1, 3, 3);
+	cout << "\nMinimum Number is: ";
+	cout << soln19::MinNumInMatrix(Matrix1, 3, 3);
+	cout << "\n\nMax Number is: ";
+	cout << soln19::MaxNumInMatrix(Matrix1, 3, 3);
 }

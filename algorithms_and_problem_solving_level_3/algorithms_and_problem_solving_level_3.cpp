@@ -17,6 +17,7 @@
 #include "16.h"
 #include "17.h"
 #include "18.h"
+#include "19.h"
 
 int main()
 {
@@ -39,7 +40,8 @@ int main()
 	  //CountNumberInMatrixEx();
 	  //CheckIsSparceMatrixEx();
 	  //IsNumberInMatrixEx();
-	IntersectedNumbersEx();
+	//IntersectedNumbersEx();
+	MinNumAndMaxNumInMatrix();
 	//system("pause>0");
 	return 0;
 }
