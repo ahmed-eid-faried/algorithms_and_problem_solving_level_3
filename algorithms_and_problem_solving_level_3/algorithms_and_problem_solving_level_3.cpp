@@ -18,6 +18,7 @@
 #include "17.h"
 #include "18.h"
 #include "19.h"
+#include "20.h"
 
 int main()
 {
@@ -41,7 +42,8 @@ int main()
 	  //CheckIsSparceMatrixEx();
 	  //IsNumberInMatrixEx();
 	//IntersectedNumbersEx();
-	MinNumAndMaxNumInMatrix();
+	//MinNumAndMaxNumInMatrix();
+	  PalindromeMatrixEx();
 	//system("pause>0");
 	return 0;
 }

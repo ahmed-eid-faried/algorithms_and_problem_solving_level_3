@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <iostream>
 using namespace std;
-namespace soln19
+namespace soln20
 {
 	int RandomNumber(int From, int To) {
 		int randNum = rand() % (To - From + 1) + From;
@@ -40,40 +40,30 @@ namespace soln19
 
 		return false;
 	}
-	int MaxNumInMatrix(int  Matrix[3][3], int cols, int rows) {
-		int max = Matrix[0][0];
-		for (int i = 0; i < rows; i++)
-		{
-			for (int j = 0; j < cols; j++)
-			{
-				if (Matrix[i][j] > max)  max = Matrix[i][j];
-			}
-		}
 
-		return max;
-	}
-	int MinNumInMatrix(int  Matrix[3][3], int cols, int rows) {
+	bool IsPalindromeMatrix(int  Matrix[3][3], int cols, int rows) {
 		int min = Matrix[0][0];
 		for (int i = 0; i < rows; i++)
 		{
 			for (int j = 0; j < cols; j++)
 			{
-				if (Matrix[i][j] < min)  min = Matrix[i][j];
+				if (Matrix[i][j] != Matrix[i][cols - 1 - j]) return false;
 			}
 		}
 
-		return min;
+		return true;
 	}
 }
 
+//
 
-void MinNumAndMaxNumInMatrix() {
-	int Matrix1[3][3];
-	soln19::FillMatrixByRandomNum2(Matrix1, 3, 3);
+void PalindromeMatrixEx() {
+	int Matrix1[3][3] = { {1,2,1},{5,5,5},{7,3,7} };
 	cout << "\nMatrix1:\n";
-	soln19::PrintMatrix(Matrix1, 3, 3);
-	cout << "\nMinimum Number is: ";
-	cout << soln19::MinNumInMatrix(Matrix1, 3, 3);
-	cout << "\n\nMax Number is: ";
-	cout << soln19::MaxNumInMatrix(Matrix1, 3, 3);
+	soln20::PrintMatrix(Matrix1, 3, 3);
+	if (soln20::IsPalindromeMatrix(Matrix1, 3, 3))
+	{
+		cout << "\nYes: Matrix is Palindrome\n";
+	}
+	else          cout << "\nNo: Matrix is NOT Palindrome\n";
 }
