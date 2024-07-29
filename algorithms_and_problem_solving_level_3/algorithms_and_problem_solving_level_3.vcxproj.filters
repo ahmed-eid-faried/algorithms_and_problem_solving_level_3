@@ -110,5 +110,8 @@
     <ClInclude Include="29.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="30.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -35,10 +35,12 @@ namespace soln29
 		}
 		return Conter;
 	}
-	int CountLetters(string text, enWhatToCount WhatToCount = enWhatToCount::none) {
+	enum enWhatToCount { SmallLetters = 0, CapitalLetters = 1, All = 3 };
+
+	int CountLetters(string text, enWhatToCount WhatToCount = enWhatToCount::All) {
 		switch (WhatToCount)
 		{
-		case enWhatToCount::none:
+		case enWhatToCount::All:
 			return text.length();
 		case enWhatToCount::CapitalLetters:
 			return CountCapitalLetters(text);
@@ -49,12 +51,11 @@ namespace soln29
 			return 0;
 		}
 	}
-	enum enWhatToCount { none, CapitalLetters, SmallLetters };
 }
 
 //
 
-void InvertAllStringLettersCaseEX() {
+void CounterLettersEX() {
 	string S1 = soln29::ReadString("ENTER YOUR TEXT? \n");
 	cout << "\nString Length = " << S1.length();
 	cout << "\nCapital Letters Count= " << soln29::CountCapitalLetters(S1);

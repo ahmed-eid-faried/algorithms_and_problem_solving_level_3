@@ -28,6 +28,7 @@
 #include "27.h"
 #include "28.h"
 #include "29.h"
+#include "30.h"
 
 int main()
 {
@@ -61,7 +62,8 @@ int main()
 	//UpperAndLowerAllStringEx();
 	 //InvertLetterCaseEX();
 	//InvertAllStringLettersCaseEX();
-	CounterLettersEX();
+	//CounterLettersEX();
+	CountLetterInStringEX();
 	//system("pause>0");
 	return 0;
 }
