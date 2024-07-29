@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 
-namespace soln25
+namespace soln26
 {
 	string ReadString(string Message) {
 		string text;
@@ -38,12 +38,12 @@ namespace soln25
 //
 
 void UpperAndLowerAllStringEx() {
-	string S1 = soln25::ReadString("Please Enter Text?\n");
+	string S1 = soln26::ReadString("Please Enter Text?\n");
 	cout << "\nString after LowerAllString:\n";
-	S1 = soln25::LowerAllString(S1);
+	S1 = soln26::LowerAllString(S1);
 	cout << S1 << endl;
 	cout << "\nString after UpperAllString:\n";
-	S1 = soln25::UpperAllString(S1);
+	S1 = soln26::UpperAllString(S1);
 	cout << S1 << endl;
 }
 

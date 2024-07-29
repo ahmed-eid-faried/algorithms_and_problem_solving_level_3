@@ -98,5 +98,14 @@
     <ClInclude Include="25.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="26.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="27.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="28.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
