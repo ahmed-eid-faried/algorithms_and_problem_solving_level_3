@@ -16,8 +16,7 @@ namespace soln27
 	char InvertLetterCase(char Char) {
 		Char = islower(Char) ? toupper(Char) : tolower(Char);
 		//Char = (Char > char(90)) ? toupper(Char) : tolower(Char);
-		cout << endl;
-		return Char;
+ 		return Char;
 
 	}
 

@@ -16,8 +16,7 @@ namespace soln28
 	char InvertLetterCase(char Char) {
 		Char = islower(Char) ? toupper(Char) : tolower(Char);
 		//Char = (Char > char(90)) ? toupper(Char) : tolower(Char);
-		cout << endl;
-		return Char;
+ 		return Char;
 
 	}
 	string InvertAllStringLettersCase(string text) {
@@ -28,8 +27,7 @@ namespace soln28
 			//text[i] = (text[i] > char(90)) ? toupper(text[i]) : tolower(text[i]);
 
 		}
-		cout << endl;
-		return text;
+ 		return text;
 
 	}
 
