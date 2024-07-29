@@ -21,6 +21,7 @@
 #include "20.h"
 #include "21.h"
 #include "22.h"
+#include "23.h"
 
 int main()
 {
@@ -47,7 +48,8 @@ int main()
 	//MinNumAndMaxNumInMatrix();
 	  //PalindromeMatrixEx();
 	//FibonacciUsingLoopEx();
-	FibonacciUsingRecursionEx();
+	//FibonacciUsingRecursionEx();
+	FirstLetterOfEachWord();
 	//system("pause>0");
 	return 0;
 }
