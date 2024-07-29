@@ -23,6 +23,7 @@
 #include "22.h"
 #include "23.h"
 #include "24.h"
+#include "25.h"
 
 int main()
 {
@@ -51,7 +52,8 @@ int main()
 	//FibonacciUsingLoopEx();
 	//FibonacciUsingRecursionEx();
 	//FirstLetterOfEachWord();
-	UpperFirstLetterOfEachWordEx();
+	//UpperFirstLetterOfEachWordEx();
+	LowerFirstLetterOfEachWordEx();
 	//system("pause>0");
 	return 0;
 }
