@@ -43,11 +43,11 @@ namespace soln32
 		return Conter;
 	}
 	bool IsVowel(char Ch1) {
-		char VowelLetters[5] = { 'a','e','i','o','y' };
+		char VowelLetters[5] = { 'a','e','i','o','u' };
 
 		for (int i = 0; i < 5; i++)
 		{
-			if (tolower(VowelLetters[i]) == tolower(Ch1))return true;
+			if (VowelLetters[i] == tolower(Ch1))return true;
 		}
 		return false;
 	}

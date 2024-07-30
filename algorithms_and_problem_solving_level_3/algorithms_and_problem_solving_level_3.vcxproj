@@ -156,6 +156,7 @@
     <ClInclude Include="30.h" />
     <ClInclude Include="31.h" />
     <ClInclude Include="32.h" />
+    <ClInclude Include="33.h" />
     <ClInclude Include="4.h" />
     <ClInclude Include="5.h" />
     <ClInclude Include="6.h" />

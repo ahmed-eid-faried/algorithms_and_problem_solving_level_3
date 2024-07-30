@@ -31,6 +31,7 @@
 #include "30.h"
 #include "31.h"
 #include "32.h"
+#include "33.h"
 
 int main()
 {
@@ -67,7 +68,8 @@ int main()
 	//CounterLettersEX();
 	//CountLetterInStringEX();
 	//CountLetterOrInvertLetterInStringEX();
-	IsVowelCharEx();
+	//IsVowelCharEx();
+	 CountVowelsEx();
 	//system("pause>0");
 	return 0;
 }
