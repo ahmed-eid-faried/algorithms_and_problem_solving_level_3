@@ -3,9 +3,10 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#include <iomanip>
 using namespace std;
 
-namespace soln33
+namespace soln34
 {
 
 	string ReadString(string Message) {
@@ -24,23 +25,23 @@ namespace soln33
 		}
 		return false;
 	}
-	int CountVowels(string text) {
-		int Conter = 0;
-		for (int i = 0; i < text.length(); i++)
+	void PrintVowels(string text) {
+ 		for (int i = 0; i < text.length(); i++)
 		{
-			if (IsVowel(text[i]))Conter++;
+			if (IsVowel(text[i])) {
+				cout  << setw(3) << text[i];
+			}
 		}
-		return Conter;
-	}
+ 	}
 
 
 }
 
 //
 
-void CountVowelsEx() {
-	string S1 = soln33::ReadString("enter text? \n ");
-	cout << "\nNumber of vowels is: " << soln33::CountVowels(S1);
+void PrintVowelsEx() {
+	string S1 = soln34::ReadString("enter text? \n ");
+	soln34::PrintVowels(S1);
 }
 
 
