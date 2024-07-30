@@ -47,7 +47,7 @@ namespace soln32
 
 		for (int i = 0; i < 5; i++)
 		{
-			if (VowelLetters[i] == Ch1)return true;
+			if (tolower(VowelLetters[i]) == tolower(Ch1))return true;
 		}
 		return false;
 	}
@@ -56,7 +56,7 @@ namespace soln32
 
 //
 
-void CountLetterOrInvertLetterInStringEX() {
+void IsVowelCharEx() {
 	char Ch1 = soln32::ReadChar("enter letter: ");
 	if (soln32::IsVowel(Ch1))
 		cout << "\nYES Letter \'" << Ch1 << "\' is vowel";

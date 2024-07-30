@@ -66,7 +66,7 @@ int main()
 	//InvertAllStringLettersCaseEX();
 	//CounterLettersEX();
 	//CountLetterInStringEX();
-	CountLetterOrInvertLetterInStringEX();
+	//CountLetterOrInvertLetterInStringEX();
 	IsVowelCharEx();
 	//system("pause>0");
 	return 0;
