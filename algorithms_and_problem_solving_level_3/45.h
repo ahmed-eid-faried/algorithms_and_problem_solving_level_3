@@ -14,7 +14,7 @@ namespace soln45
 		cin >> Num;
 		return Num;
 	}
- 	string ReadString(string Message) {
+	string ReadString(string Message) {
 		string Text;
 		cout << Message;
 		getline(cin, Text);
@@ -50,7 +50,7 @@ namespace soln45
 		strClientRecord += Client.PinCode + Seperator;
 		strClientRecord += Client.Name + Seperator;
 		strClientRecord += Client.Phone + Seperator;
-		strClientRecord += to_string(Client.AccountBalance) + Seperator;
+		strClientRecord += to_string(Client.AccountBalance);
 		return strClientRecord;
 	}
 
