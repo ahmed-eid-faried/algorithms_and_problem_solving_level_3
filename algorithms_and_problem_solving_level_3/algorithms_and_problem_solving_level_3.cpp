@@ -33,6 +33,7 @@
 #include "32.h"
 #include "33.h"
 #include "34.h"
+#include "35.h"
 
 int main()
 {
@@ -71,7 +72,8 @@ int main()
 	//CountLetterOrInvertLetterInStringEX();
 	//IsVowelCharEx();
 	 //CountVowelsEx();
-	 PrintVowelsEx();
+	 //PrintVowelsEx();
+	 PrintEachWordInStringEX();
 	//system("pause>0");
 	return 0;
 }
