@@ -36,6 +36,7 @@
 #include "35.h"
 #include "36.h"
 #include "37.h"
+#include "38.h"
 
 int main()
 {
@@ -77,7 +78,8 @@ int main()
 	 //PrintVowelsEx();
 	 //PrintEachWordInStringEX();
 	//CountWordsInStringEX();
-	SplitStringEX();
+	//SplitStringEX();
+	TrimStringEX();
 	//system("pause>0");
 	return 0;
 }
