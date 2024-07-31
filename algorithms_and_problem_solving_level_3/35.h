@@ -16,23 +16,7 @@ namespace soln35
 		return Text;
 	}
 
-	bool IsVowel(char Ch1) {
-		char VowelLetters[5] = { 'a','e','i','o','u' };
-
-		for (int i = 0; i < 5; i++)
-		{
-			if (VowelLetters[i] == tolower(Ch1))return true;
-		}
-		return false;
-	}
-	void PrintVowels(string text) {
-		for (int i = 0; i < text.length(); i++)
-		{
-			if (IsVowel(text[i])) {
-				cout << setw(3) << text[i];
-			}
-		}
-	}
+ 
 
 	void PrintEachWordInString(string S1) {
 		string delim = " ";
