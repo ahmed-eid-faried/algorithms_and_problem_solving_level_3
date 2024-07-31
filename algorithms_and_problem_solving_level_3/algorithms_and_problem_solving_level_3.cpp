@@ -38,6 +38,7 @@
 #include "37.h"
 #include "38.h"
 #include "39.h"
+#include "40.h"
 
 int main()
 {
@@ -81,7 +82,8 @@ int main()
 	//CountWordsInStringEX();
 	//SplitStringEX();
 	//TrimStringEX();
-	JoinStringEX();
+	//JoinStringEX();
+	JoinStringArrayEX();
 	//system("pause>0");
 	return 0;
 }
