@@ -44,6 +44,7 @@
 #include "42.h"
 #include "43.h"
 #include "44.h"
+#include "45.h"
 
 int main()
 {
@@ -92,7 +93,8 @@ int main()
 	//ReverseWordsStringEX();
 	//ReplaceWordInStringUsingBuiltInFunctionEX();
 	//ReplaceWordInStringUsingSplitEX();
-	RemovePunctuationsFromStringEX();
+	//RemovePunctuationsFromStringEX();
+	ConvertRecordToLineStringEX();
 	//system("pause>0");
 	return 0;
 }

@@ -14,13 +14,7 @@ namespace soln45
 		cin >> Num;
 		return Num;
 	}
-	int ReadNumber(string Message) {
-		int Num;
-		cout << Message;
-		cin >> Num;
-		return Num;
-	}
-	string ReadString(string Message) {
+ 	string ReadString(string Message) {
 		string Text;
 		cout << Message;
 		getline(cin, Text);
@@ -63,7 +57,7 @@ namespace soln45
 
 
 }
-void RemovePunctuationsFromStringEX() {
+void ConvertRecordToLineStringEX() {
 	cout << "\nPlease Enter Client Data: \n\n";
 	soln45::Client Client;
 	Client = soln45::ReadNewClient();
