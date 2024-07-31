@@ -85,7 +85,7 @@ int main()
 	//TrimStringEX();
 	//JoinStringEX();
 	//JoinStringArrayEX();
-	ReverseVectorStringEX();
+	ReverseWordsStringEX();
 	//system("pause>0");
 	return 0;
 }
