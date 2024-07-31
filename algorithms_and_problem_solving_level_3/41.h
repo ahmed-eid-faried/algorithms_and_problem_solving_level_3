@@ -45,7 +45,7 @@ namespace soln41
 		return S1.substr(0, S1.length() - (delim.length()));
 	}
 
-	string ReverseVectorString(string S1, string delim = " ") {
+	string ReverseWordsString(string S1, string delim = " ") {
 		return ReverseJoinString(SplitString(S1, delim));
 	}
 	void PrintReverseVectorString(vector<string> listWords) {
@@ -61,13 +61,13 @@ namespace soln41
 
 //
 
-void ReverseVectorStringEX() {
+void ReverseWordsStringEX() {
 	string S1 = soln41::ReadString("ENTER YOUR TEXT?\n");
 	vector<string> listWords = soln41::SplitString(S1, " ");
 	soln41::PrintReverseVectorString(listWords);
 	cout << "==========================================================\n";
 	string S2 = "ahmed,eid,mady";
-	cout << " ===>>> " << soln41::ReverseVectorString(S2, ",") << endl;
+	cout << " ===>>> " << soln41::ReverseWordsString(S2, ",") << endl;
 
 }
 
