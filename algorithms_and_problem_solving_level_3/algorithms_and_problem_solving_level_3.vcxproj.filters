@@ -143,5 +143,8 @@
     <ClInclude Include="40.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="41.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
