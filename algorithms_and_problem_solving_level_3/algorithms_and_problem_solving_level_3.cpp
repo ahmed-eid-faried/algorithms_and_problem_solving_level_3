@@ -43,6 +43,7 @@
 #include "42.h"
 #include "42.h"
 #include "43.h"
+#include "44.h"
 
 int main()
 {
@@ -90,7 +91,8 @@ int main()
 	//JoinStringArrayEX();
 	//ReverseWordsStringEX();
 	//ReplaceWordInStringUsingBuiltInFunctionEX();
-	ReplaceWordInStringUsingSplitEX();
+	//ReplaceWordInStringUsingSplitEX();
+	RemovePunctuationsFromStringEX();
 	//system("pause>0");
 	return 0;
 }
