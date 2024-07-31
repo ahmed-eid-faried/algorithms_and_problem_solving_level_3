@@ -162,6 +162,7 @@
     <ClInclude Include="36.h" />
     <ClInclude Include="37.h" />
     <ClInclude Include="38.h" />
+    <ClInclude Include="39.h" />
     <ClInclude Include="4.h" />
     <ClInclude Include="5.h" />
     <ClInclude Include="6.h" />
