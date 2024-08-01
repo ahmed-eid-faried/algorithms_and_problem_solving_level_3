@@ -91,7 +91,38 @@ namespace soln49
 			MyFile.close();
 		}
 	}
-	void FindClientByAccountNumber(vector<string>& vFile, string AccountNumber) {
+	void SaveVectorToFile(string path, vector<string>& vFile) {
+		fstream MyFile;
+		MyFile.open(path, ios::out);
+		if (MyFile.is_open()) {
+			for (string& Line : vFile) {
+				if (Line != "") {
+					MyFile << Line << endl;
+				}
+			}
+			MyFile.close();
+		}
+	}
+
+	void DeleteRecordFromFile(string path, string DeletedRecord) {
+		vector<string> vFile;
+		DataFromFileToVector(path, vFile);
+		for (string& Line : vFile) {
+			if (Line == DeletedRecord) {
+				Line = "";
+			}
+		}
+		SaveVectorToFile(path, vFile);
+	}
+	void DeleteRecord(string path, string DeletedRecord) {
+		char Delete = 'N';
+		cout << "Are you delete this account Y/N? ";
+		cin >> Delete;
+		if (toupper(Delete) == 'Y') {
+			DeleteRecordFromFile(path, DeletedRecord);
+		}
+	}
+	void FindClientByAccountNumber(vector<string>& vFile, string AccountNumber, string path) {
 		int Counter = 0;
 		for (string& Line : vFile) {
 			if (!Line.empty())
@@ -100,6 +131,7 @@ namespace soln49
 				if (Client.AccountNumber == AccountNumber) {
 					PrintClient(Client);
 					cout << endl;
+					DeleteRecord(path,Line);
 					Counter++;
 				}
 
@@ -123,7 +155,7 @@ void FindClientByAccountNumberEx() {
 	vector<string> vFile;
 	soln49::DataFromFileToVector("clients.txt", vFile);
 	soln49::PrintClientHeaderTable(vFile);
-	soln49::FindClientByAccountNumber(vFile, AccountNumber);
+	soln49::FindClientByAccountNumber(vFile, AccountNumber, "clients.txt");
 	cout << endl;
 }
 
