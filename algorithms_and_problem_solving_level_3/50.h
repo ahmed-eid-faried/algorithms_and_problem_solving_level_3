@@ -7,7 +7,7 @@
 #include <iomanip>
 using namespace std;
 
-namespace soln49
+namespace soln50
 {
 	double ReadDoubleNumber(string Message) {
 		double Num;
@@ -116,13 +116,13 @@ namespace soln49
 	}
 	void DeleteRecord(string path, string DeletedRecord) {
 		char Delete = 'N';
-		cout << "Are you delete this account Y/N? ";
+		cout << endl << endl << "Are you delete this account Y/N? ";
 		cin >> Delete;
 		if (toupper(Delete) == 'Y') {
 			DeleteRecordFromFile(path, DeletedRecord);
 		}
 	}
-	void FindClientByAccountNumber(vector<string>& vFile, string AccountNumber, string path) {
+	void DeleteClientByAccountNumber(vector<string>& vFile, string AccountNumber, string path) {
 		int Counter = 0;
 		for (string& Line : vFile) {
 			if (!Line.empty())
@@ -131,7 +131,7 @@ namespace soln49
 				if (Client.AccountNumber == AccountNumber) {
 					PrintClient(Client);
 					cout << endl;
-					DeleteRecord(path,Line);
+					DeleteRecord(path, Line);
 					Counter++;
 				}
 
@@ -150,12 +150,12 @@ namespace soln49
 }
 
 
-void FindClientByAccountNumberEx() {
-	string AccountNumber = soln49::ReadString("What is your AccountNumber?\n");
+void DeleteClientByAccountNumberEx() {
+	string AccountNumber = soln50::ReadString("What is your AccountNumber?\n");
 	vector<string> vFile;
-	soln49::DataFromFileToVector("clients.txt", vFile);
-	soln49::PrintClientHeaderTable(vFile);
-	soln49::FindClientByAccountNumber(vFile, AccountNumber, "clients.txt");
+	soln50::DataFromFileToVector("clients.txt", vFile);
+	soln50::PrintClientHeaderTable(vFile);
+	soln50::DeleteClientByAccountNumber(vFile, AccountNumber, "clients.txt");
 	cout << endl;
 }
 
