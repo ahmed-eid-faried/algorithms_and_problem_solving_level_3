@@ -48,6 +48,7 @@
 #include "46.h"
 #include "47.h"
 #include "48.h"
+#include "49.h"
 
 int main()
 {
@@ -100,7 +101,9 @@ int main()
 	//ConvertRecordToLineStringEX();
 	//ConvertLineToRecordStringEX();
 	  //AddClientsToFileEX();
-	  ShowAllLineFromFile();
+	  //ShowAllLineFromFile();
+	  // 
+	FindClientByAccountNumberEx();
 	  //system("pause>0");
 	return 0;
 }

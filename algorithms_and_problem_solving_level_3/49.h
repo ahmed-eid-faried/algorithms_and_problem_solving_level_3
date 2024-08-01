@@ -2,11 +2,12 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <iomanip>
 using namespace std;
 
-namespace soln48
+namespace soln49
 {
 	double ReadDoubleNumber(string Message) {
 		double Num;
@@ -17,7 +18,7 @@ namespace soln48
 	string ReadString(string Message) {
 		string Text;
 		cout << Message;
-		getline(cin, Text);
+		getline(cin >> ws, Text);
 		return Text;
 	}
 	vector<string> SplitString(string S1, string delim = " ") {
@@ -90,13 +91,16 @@ namespace soln48
 			MyFile.close();
 		}
 	}
-	void ReadFileByVector(vector<string>& vFile) {
+	void ReadFileByVector(vector<string>& vFile, string AccountNumber) {
 		for (string& Line : vFile) {
 			if (!Line.empty())
 			{
 				Client Client = ConvertLineToRecord(Line);
-				PrintClient(Client);
-				cout << endl;
+				if (Client.AccountNumber == AccountNumber) {
+					PrintClient(Client);
+					cout << endl;
+				}
+
 			}
 		}
 
@@ -110,11 +114,12 @@ namespace soln48
 }
 
 
-void ShowAllLineFromFile() {
+void FindClientByAccountNumberEx() {
+	string AccountNumber = soln49::ReadString("What is your AccountNumber?\n");
 	vector<string> vFile;
-	soln48::DataFromFileToVector("clients.txt", vFile);
-	soln48::PrintClientHeaderTable(vFile);
-	soln48::ReadFileByVector(vFile);
+	soln49::DataFromFileToVector("clients.txt", vFile);
+	soln49::PrintClientHeaderTable(vFile);
+	soln49::ReadFileByVector(vFile, AccountNumber);
 	cout << endl;
 }
 
