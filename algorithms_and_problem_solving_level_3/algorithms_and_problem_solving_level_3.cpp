@@ -45,6 +45,8 @@
 #include "43.h"
 #include "44.h"
 #include "45.h"
+#include "46.h"
+#include "47.h"
 
 int main()
 {
@@ -94,7 +96,10 @@ int main()
 	//ReplaceWordInStringUsingBuiltInFunctionEX();
 	//ReplaceWordInStringUsingSplitEX();
 	//RemovePunctuationsFromStringEX();
-	ConvertRecordToLineStringEX();
+	//ConvertRecordToLineStringEX();
+	//ConvertLineToRecordStringEX();
+	  AddClientsToFileEX();
+		 
 	//system("pause>0");
 	return 0;
 }

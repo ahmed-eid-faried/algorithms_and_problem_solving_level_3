@@ -66,7 +66,7 @@ namespace soln46
 void ConvertLineToRecordStringEX() {
 	cout << "\n\nClient Record for Saving is: \n";
 	string S1 = "A323#%&#13420#%&#AHMED mady#%&#03813813#%&#334.990000#%&#";
-	cout << "\nLine Record is:\n";
+	cout << "\nLine Record is:\n"<< S1 << endl << endl;
 	soln46::Client Client;
 	Client = soln46::ConvertLineToRecord(S1);
 	soln46::PrintClient(Client);
