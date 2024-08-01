@@ -47,6 +47,7 @@
 #include "45.h"
 #include "46.h"
 #include "47.h"
+#include "48.h"
 
 int main()
 {
@@ -98,9 +99,9 @@ int main()
 	//RemovePunctuationsFromStringEX();
 	//ConvertRecordToLineStringEX();
 	//ConvertLineToRecordStringEX();
-	  AddClientsToFileEX();
-		 
-	//system("pause>0");
+	  //AddClientsToFileEX();
+	  ShowAllLineFromFile();
+	  //system("pause>0");
 	return 0;
 }
 
