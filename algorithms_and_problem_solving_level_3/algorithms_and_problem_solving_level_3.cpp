@@ -51,6 +51,7 @@
 #include "49.h"
 #include "50.h"
 #include "50_2.h"
+#include "51.h"
 
 int main()
 {
@@ -102,12 +103,13 @@ int main()
 	//RemovePunctuationsFromStringEX();
 	//ConvertRecordToLineStringEX();
 	//ConvertLineToRecordStringEX();
-	  //AddClientsToFileEX();
-	  //ShowAllLineFromFile();
-	//FindClientByAccountNumberEx();
-	//DeleteClientByAccountNumberEx();
-	DeleteClientByAccountNumberEx2();
-	  //system("pause>0");
+	//AddClientsToFileEX();
+	//ShowAllLineFromFile();
+  //FindClientByAccountNumberEx();
+  //DeleteClientByAccountNumberEx();
+  //DeleteClientByAccountNumberEx2();
+	UpdateClientByAccountNumberEx();
+	//system("pause>0");
 	return 0;
 }
 

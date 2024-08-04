@@ -69,7 +69,8 @@ namespace soln51 {
 		Client.Name = vClientData[2];
 		Client.Phone = vClientData[3];
 		Client.AccountBalance = stod(vClientData[4]);
-		//cast string  to doublereturn Client;
+		//cast string  to double
+		return Client;
 	}
 	string  ConvertRecordToLine(sClient Client, string Seperator = "#//#") {
 		string  stClientRecord = "";
@@ -174,7 +175,7 @@ namespace soln51 {
 
 
 
-void UpdateClientByAccountNumberEx2() {
+void UpdateClientByAccountNumberEx() {
 	vector <soln51::sClient> vClients = soln51::LoadCleintsDataFromFile(soln51::ClientsFileName);
 	string AccountNumber = soln51::ReadClientAccountNumber();
 	UpdateClientByAccountNumber(AccountNumber, vClients);
