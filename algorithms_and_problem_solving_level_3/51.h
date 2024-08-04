@@ -4,7 +4,7 @@
 #include<vector>
 #include<iomanip>
 using namespace std;
-namespace soln50_2 {
+namespace soln51 {
 	const string  ClientsFileName = "Clients2.txt";
 
 	struct sClient {
@@ -13,8 +13,31 @@ namespace soln50_2 {
 		string Name;
 		string Phone;
 		double AccountBalance;
-		bool MarkForDelete = false;
+		bool MarkForUpdate = false;
 	};
+	double ReadDoubleNumber(string Message) {
+		double Num;
+		cout << Message;
+		cin >> Num;
+		return Num;
+	}
+	string ReadString(string Message) {
+		string Text;
+		cout << Message;
+		// Usage of std::ws will extract allthe whitespace character
+		getline(cin >> ws, Text);
+		return Text;
+	}
+	sClient ReadUpdateClient(string AccountNumber) {
+		sClient client;
+		client.AccountNumber = AccountNumber;
+		client.PinCode = ReadString("ENTER YOUR PinCode: ");
+		client.Name = ReadString("ENTER YOUR Name: ");
+		client.Phone = ReadString("ENTER YOUR Phone: ");
+		client.AccountBalance = ReadDoubleNumber("ENTER YOUR AccountBalance: ");
+		return client;
+	};
+
 
 	vector<string> SplitString(string S1, string Delim) {
 		vector<string > vString;
@@ -89,10 +112,10 @@ namespace soln50_2 {
 		}
 		return false;
 	}
-	bool MarkClientForDeleteByAccountNumber(string AccountNumber, vector <sClient>& vClients) {
+	bool MarkClientForUpdateByAccountNumber(string AccountNumber, vector <sClient>& vClients) {
 		for (sClient& C : vClients) {
 			if (C.AccountNumber == AccountNumber) {
-				C.MarkForDelete = true;
+				C.MarkForUpdate = true;
 				return true;
 			}
 		} return false;
@@ -105,28 +128,32 @@ namespace soln50_2 {
 		string  DataLine;
 		if (MyFile.is_open()) {
 			for (sClient C : vClients) {
-				if (C.MarkForDelete == false) {
+				if (C.MarkForUpdate == false) {
 					//we only write records that are not marked for delete.  
 					DataLine = ConvertRecordToLine(C);
+					MyFile << DataLine << endl;
+				}
+				else {
+					DataLine = ConvertRecordToLine(ReadUpdateClient(C.AccountNumber));
 					MyFile << DataLine << endl;
 				}
 			}         MyFile.close();
 		} return vClients;
 	}
-	bool DeleteClientByAccountNumber(string AccountNumber, vector<sClient>& vClients) {
+	bool UpdateClientByAccountNumber(string AccountNumber, vector<sClient>& vClients) {
 		sClient Client;
 		char Answer = 'n';
 
 		if (FindClientByAccountNumber(AccountNumber, vClients, Client)) {
 			PrintClientCard(Client);
-			cout << "\n\nAre you sure you want delete this client? y/n ? ";
+			cout << "\n\nAre you sure you want update this client? y/n ? ";
 			cin >> Answer;
 			if (Answer == 'y' || Answer == 'Y') {
-				MarkClientForDeleteByAccountNumber(AccountNumber, vClients);
+				MarkClientForUpdateByAccountNumber(AccountNumber, vClients);
 				SaveCleintsDataToFile(ClientsFileName, vClients);
 				//Refresh Clients
 				vClients = LoadCleintsDataFromFile(ClientsFileName);
-				cout << "\n\nClient Deleted Successfully.";
+				cout << "\n\nClient Update Successfully.";
 				return true;
 			}
 		}
@@ -141,13 +168,15 @@ namespace soln50_2 {
 		cin >> AccountNumber;
 		return AccountNumber;
 	}
+
+
 }
 
 
 
-void DeleteClientByAccountNumberEx2() {
-	vector <soln50_2::sClient> vClients = soln50_2::LoadCleintsDataFromFile(soln50_2::ClientsFileName);
-	string AccountNumber = soln50_2::ReadClientAccountNumber();
-	DeleteClientByAccountNumber(AccountNumber, vClients);
+void UpdateClientByAccountNumberEx2() {
+	vector <soln51::sClient> vClients = soln51::LoadCleintsDataFromFile(soln51::ClientsFileName);
+	string AccountNumber = soln51::ReadClientAccountNumber();
+	UpdateClientByAccountNumber(AccountNumber, vClients);
 
 }

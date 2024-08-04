@@ -50,6 +50,7 @@
 #include "48.h"
 #include "49.h"
 #include "50.h"
+#include "50_2.h"
 
 int main()
 {
@@ -104,7 +105,8 @@ int main()
 	  //AddClientsToFileEX();
 	  //ShowAllLineFromFile();
 	//FindClientByAccountNumberEx();
-	DeleteClientByAccountNumberEx();
+	//DeleteClientByAccountNumberEx();
+	DeleteClientByAccountNumberEx2();
 	  //system("pause>0");
 	return 0;
 }
