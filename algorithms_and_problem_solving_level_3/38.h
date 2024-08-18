@@ -15,9 +15,6 @@ namespace soln38
 		getline(cin, Text);
 		return Text;
 	}
-
-
-
 	string TrimLeft(string S1) {
 		char delim = ' ';
 		vector<string> listWords;
@@ -43,8 +40,6 @@ namespace soln38
 	string Trim(string S1) {
 		return TrimRight(TrimLeft(S1));
 	}
-
- 
 }
 
 //
