@@ -25,6 +25,7 @@ namespace soln31
 		return Char;
 
 	}
+
 	int CountLetter(string text, char Ch1, bool IsMatchCase = true) {
 		int Conter = 0;
 		char InvertLetter = InvertLetterCase(Ch1);

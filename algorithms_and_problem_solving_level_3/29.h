@@ -19,6 +19,8 @@ namespace soln29
 		return Char;
 
 	}
+
+
 	int CountCapitalLetters(string text) {
 		int Conter = 0;
 		for (int i = 0; i < text.length(); i++)
@@ -36,7 +38,6 @@ namespace soln29
 		return Conter;
 	}
 	enum enWhatToCount { SmallLetters = 0, CapitalLetters = 1, All = 3 };
-
 	int CountLetters(string text, enWhatToCount WhatToCount = enWhatToCount::All) {
 		switch (WhatToCount)
 		{
@@ -51,6 +52,7 @@ namespace soln29
 			return 0;
 		}
 	}
+
 }
 
 //

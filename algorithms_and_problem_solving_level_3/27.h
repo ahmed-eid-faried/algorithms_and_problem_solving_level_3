@@ -17,7 +17,6 @@ namespace soln27
 		Char = islower(Char) ? toupper(Char) : tolower(Char);
 		//Char = (Char > char(90)) ? toupper(Char) : tolower(Char);
  		return Char;
-
 	}
 
 }

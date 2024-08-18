@@ -29,8 +29,6 @@ namespace soln38
 			}
 		}
 	}
-
-
 	string TrimRight(string S1) {
 		char delim = ' ';
 		vector<string> listWords;

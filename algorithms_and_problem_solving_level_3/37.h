@@ -34,15 +34,16 @@ namespace soln37
 		if (S1 != "")listWords.push_back(S1);
 		return listWords;
 	}
-
-
-
 	void PrintVectorString(vector<string> listWords) {
 		for (int i = 0; i < listWords.size(); i++)
 		{
 			cout << listWords[i] << endl;
 		}
 	}
+
+
+
+
 }
 
 //

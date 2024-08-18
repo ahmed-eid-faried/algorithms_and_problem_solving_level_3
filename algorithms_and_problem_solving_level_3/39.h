@@ -29,9 +29,6 @@ namespace soln39
 		}
 		return S1;
 	}
-
-
-
 	void PrintVectorString(vector<string> listWords) {
 		cout << "listWords (vector) ==>> " << "[ ";
 		for (int i = 0; i < listWords.size(); i++)
